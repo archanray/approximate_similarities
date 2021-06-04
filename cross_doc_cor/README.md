@@ -1,5 +1,10 @@
 # Cross-Document Coreference Resolution
 
+We have modified this repo with our propose low-rank approximations. The `predict_low_rank.py` script is used to run the experiment.
+
+
+# Original Repo ReadMe
+
 This repository contains code and models for end-to-end cross-document coreference resolution, as decribed in our paper: [Streamlining Cross-Document Coreference Resolution: Evaluation and Modeling](https://arxiv.org/abs/2009.11032) 
 The models are trained on ECB+, but they can be used for any setting of multiple documents.
 

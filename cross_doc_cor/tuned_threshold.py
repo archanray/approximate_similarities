@@ -92,7 +92,7 @@ if __name__ == '__main__':
     config = pyhocon.ConfigFactory.parse_file(args.config)
     print(pyhocon.HOCONConverter.convert(config, "hocon"))
     create_folder(config['save_path'])
-    device = 'cuda:{}'.format(0) if torch.cuda.is_available() else 'cpu'
+    device = 'cuda:{}'.format(config['gpu_num'][0]) if torch.cuda.is_available() else 'cpu'
 
 
     # Load models and init clustering

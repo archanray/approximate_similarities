@@ -118,7 +118,7 @@ if __name__ == '__main__':
     logger.info(pyhocon.HOCONConverter.convert(config, "hocon"))
     create_folder(config['model_path'])
 
-    device = torch.device('cuda:0')
+    device = torch.device('cuda:{}'.format(config.gpu_num[0]))
 
     # init train and dev set
     bert_tokenizer = AutoTokenizer.from_pretrained(config['bert_model'])

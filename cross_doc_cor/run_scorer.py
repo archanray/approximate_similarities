@@ -45,13 +45,6 @@ def main():
 
 def evaluate(key_file, sys_file, metrics, NP_only, remove_nested,
         keep_singletons, min_span):
-    print('key_file=%s' % str(key_file))
-    print('sys_file=%s' % str(sys_file))
-    print('metrics=%s' % str(metrics))
-    print('NP_only=%s' % str(NP_only))
-    print('remove_nested=%s' % str(remove_nested))
-    print('keep_singletons=%s' % str(keep_singletons))
-    print('min_span=%s' % str(min_span))
     doc_coref_infos = reader.get_coref_infos(key_file, sys_file, NP_only,
             remove_nested, keep_singletons, min_span)
 

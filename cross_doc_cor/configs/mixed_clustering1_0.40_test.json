@@ -25,7 +25,6 @@
   "save_path": "models/pairwise_scorer1/topic_level_predicted_mentions/mixed_0.40",
   "model_path" : "models/pairwise_scorer1/topic_level_predicted_mentions/mixed_0.40",
   "model_num": 3,
-
   "threshold": 0.65,
   "linkage_type": "average"
 }

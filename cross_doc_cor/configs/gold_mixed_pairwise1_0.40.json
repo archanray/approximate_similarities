@@ -9,9 +9,9 @@
   "embedding_dimension": 20,
 
   "max_mention_span": 20,
-  "use_gold_mentions": false,
+  "use_gold_mentions": true,
   "mention_type": "mixed",
-  "top_k": 0.35,
+  "top_k": 0.40,
   "training_method": "continue",
   "subtopic": false,
   "use_predicted_topics": false,
@@ -29,7 +29,7 @@
 
   "log_path": "logs/pairwise_scorer/",
   "data_folder": "data/ecb/mentions",
-  "span_repr_path": "models/span_scorers1_0.35/mixed_span_repr_0",
-  "span_scorer_path": "models/span_scorers1_0.35/mixed_span_scorer_0",
-  "model_path": "models/pairwise_scorer1/topic_level_predicted_mentions/mixed_0.35"
+  "span_repr_path": "models/span_scorers1_0.40/mixed_span_repr_0",
+  "span_scorer_path": "models/span_scorers1_0.40/mixed_span_scorer_0",
+  "model_path": "models/pairwise_scorer1/topic_level_gold_mentions/mixed_0.40/"
 }

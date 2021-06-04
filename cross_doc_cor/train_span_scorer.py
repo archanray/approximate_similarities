@@ -66,8 +66,8 @@ if __name__ == '__main__':
     create_folder(config['model_path'])
 
     if torch.cuda.is_available():
-        device = 'cuda:0' #:{}'.format(config['gpu_num'])
-        # torch.cuda.set_device(config['gpu_num'])
+        device = 'cuda:{}'.format(config['gpu_num'])
+        torch.cuda.set_device(config['gpu_num'])
     else:
         device = 'cpu'
 

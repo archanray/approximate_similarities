@@ -9,9 +9,9 @@
   "embedding_dimension": 20,
 
   "max_mention_span": 20,
-  "use_gold_mentions": false,
+  "use_gold_mentions": true,
   "mention_type": "mixed",
-  "top_k": 0.4,
+  "top_k": 0.40,
   "split": "test",
   "training_method": "continue",
   "subtopic": false,
@@ -22,10 +22,10 @@
   "predicted_topics_path": "/home/nlp/ariecattan/coreference/coref/data/ecb/predicted_topics",
 
   "data_folder": "data/ecb/mentions",
-  "save_path": "models/pairwise_scorer2/topic_level_predicted_mentions/mixed_0.35",
-  "model_path" : "models/pairwise_scorer2/topic_level_predicted_mentions/mixed_0.35",
-  "model_num": 0,
+  "save_path": "models/pairwise_scorer1/topic_level_gold_mentions/mixed_0.40",
+  "model_path" : "models/pairwise_scorer1/topic_level_gold_mentions/mixed_0.40",
+  "model_num": 2,
 
-  "threshold": 0.65,
+  "threshold": 0.6,
   "linkage_type": "average"
 }

@@ -91,7 +91,7 @@ if __name__ == '__main__':
     config = pyhocon.ConfigFactory.parse_file(args.config)
     print(pyhocon.HOCONConverter.convert(config, "hocon"))
     create_folder(config['save_path'])
-    device = 'cuda:{}'.format(0) if torch.cuda.is_available() else 'cpu'
+    device = 'cuda:{}'.format(config['gpu_num'][0]) if torch.cuda.is_available() else 'cpu'
 
 
     # Load models and init clustering
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     # Go through each topic
 
     for topic_num, topic in enumerate(data.topic_list):
-        print('Processing topic {}'.format(topic))
+        print('Processing topic {} ({} of {})'.format(topic, topic_num, len(data.topic_list)))
         docs_embeddings, docs_length = pad_and_read_bert(data.topics_bert_tokens[topic_num], bert_model)
         span_meta_data, span_embeddings, num_of_tokens = get_all_candidate_from_topic(
             config, data, topic_num, docs_embeddings, docs_length)
